@@ -9,6 +9,7 @@ body {
 #presentation {
 	background-color: rgba(0,0,0,0.5);
 	border-bottom: 3px solid rgba(0,100,100,1);
+	margin:0;
 }
 div {
 	display: block;
@@ -54,23 +55,28 @@ li {
 	list-style-type:none;
 }
 #navbar {
-	position: sticky;
-	bottom: 500px;
+	font-family: 'Slabo 27px', serif;
+	float:right;
+	/*position: sticky;*/
+	/*top:1px;
+	bottom: 640px;*/
+	height: 100%;
 	width:200px;
+	padding-left: 5px;
+	margin-right: 20px;
+	margin-bottom: 40px;
 	list-style-type: none;
 }
 nav li {
 	padding-right: 5px;
 	font-size: 20px;	
 	text-align: right;
-	border: 1px solid rgba(100,0,0,0.5);
-	margin-top: 5px;
+	margin-top: 10px;
 	background-color: rgba(200,200,200,0.4);
-	box-shadow: 3px 3px rgba(0,0,0,0.4);
 }
 nav li:hover {
 	cursor: pointer;
-	background-color: rgba(0,0,0,0);
+	box-shadow: 15px 5px rgba(0,0,0,0.4);
 }
 
 #block div {
@@ -78,8 +84,8 @@ nav li:hover {
 }
 
 #content {
+	/*float:left;*/
 	font-family: 'Arvo', serif;
-	float: left;
 	width:700px;
 }
 

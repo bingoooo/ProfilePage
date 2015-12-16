@@ -1,0 +1,11 @@
+{
+	"id" : 23,
+	"first_name" : "DANT",
+	"last_name" : "Benjamin",
+	"occupation" : "Web Developer",
+	"badges" : 104,
+	"contact" : {
+		"email" : "sukkhato@gmail.com",
+		"website" : "http://www.bandofnuts.fr"
+	}
+}
