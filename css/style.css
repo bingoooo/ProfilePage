@@ -25,7 +25,7 @@ h1 {
 	padding-bottom: 20px;
 	border-left: 1px solid;
 	border-right: 1px solid;
-	background-color: rgba(0,0,0,0.3);
+	/*background-color: rgba(0,0,0,0.3);*/
 }
 #my-image {
 	margin:10px 40%;
@@ -78,7 +78,9 @@ nav li:hover {
 	cursor: pointer;
 	box-shadow: 15px 5px rgba(0,0,0,0.4);
 }
-
+#block {
+	width:100%;
+}
 #block div {
 	display:inline;
 }
@@ -88,7 +90,9 @@ nav li:hover {
 	font-family: 'Arvo', serif;
 	width:700px;
 }
-
+#test {
+	width :700px;
+}
 footer {
 	text-align: center;
 	padding: 20px;

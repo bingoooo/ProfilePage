@@ -8,16 +8,18 @@
 	<link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="node_modules/zepto/zepto.min.js"></script>
-	<script type="text/javascript"></script>
+	<script type="text/javascript" src="js/mustache.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
+	<script type="text/template" id="headTemplate">
+		<h1>{{first_name}} {{last_name}}</h1>
+		<h2>{{occupation}}</h2>
+	</script>
 	<div id="presentation">
 		<img id="my-image" src="css/download.jpeg" alt="Paysage de montagne avec un bouquetin"/>
-		<h1><span elt="name" alt="Profil de">DANT Benjamin</span></h1>
-		<!--span elt="first_name"></span-->
-		<h2><span elt="occupation" alt="Profession">Développeur Web</span></h2>
-		<h1><span elt="current-page">Données Personnelles</span></h1>
+		<div id="head-template"></div>
+		<h1><span id="current-page">Données Personnelles</span></h1>
 	</div>
 	<div id="main-content">
 		<div id="block">
@@ -26,49 +28,18 @@
 					<li id="personal-data" alt="Afficher les données personnelles">Données Personnelles</li>
 					<li id="cv" alt="Afficher le Cursus Scolaire">Cursus Scolaire</li>
 					<li id="pro" alt="Afficher les Compétences Professionnelles">Compétences Professionnelles</li>
-					<li id="other" alt="Afficher les autres centres d'intérêt">Autre</li>
+					<li id="contact" alt="Afficher les autres centres d'intérêt">Contact</li>
 				</nav>
-				<div id="personal-data-content" class="text-info default">
-					<p><span>User ID : </span><span elt="id"></span></p>
-					<p><span>Badges Codecademy : </span><span elt="badges"></span></p>
-					<p><span>e-mail : </span><span elt="email"></span></p>
-					<p><span>Website : </span><span elt="website"></span></p>
-					<p>Itaque verae amicitiae difficillime reperiuntur in iis qui in honoribus reque publica versantur; ubi enim istum invenias qui honorem amici anteponat suo? Quid? Haec ut omittam, quam graves, quam difficiles plerisque videntur calamitatum societates! Ad quas non est facile inventu qui descendant. Quamquam Ennius recte.</p>
-					<p>Itaque verae amicitiae difficillime reperiuntur in iis qui in honoribus reque publica versantur; ubi enim istum invenias qui honorem amici anteponat suo? Quid? Haec ut omittam, quam graves, quam difficiles plerisque videntur calamitatum societates! Ad quas non est facile inventu qui descendant. Quamquam Ennius recte.</p>
-					<p>Itaque verae amicitiae difficillime reperiuntur in iis qui in honoribus reque publica versantur; ubi enim istum invenias qui honorem amici anteponat suo? Quid? Haec ut omittam, quam graves, quam difficiles plerisque videntur calamitatum societates! Ad quas non est facile inventu qui descendant. Quamquam Ennius recte.</p>
-					<p>Itaque verae amicitiae difficillime reperiuntur in iis qui in honoribus reque publica versantur; ubi enim istum invenias qui honorem amici anteponat suo? Quid? Haec ut omittam, quam graves, quam difficiles plerisque videntur calamitatum societates! Ad quas non est facile inventu qui descendant. Quamquam Ennius recte.</p>
-					<p>Itaque verae amicitiae difficillime reperiuntur in iis qui in honoribus reque publica versantur; ubi enim istum invenias qui honorem amici anteponat suo? Quid? Haec ut omittam, quam graves, quam difficiles plerisque videntur calamitatum societates! Ad quas non est facile inventu qui descendant. Quamquam Ennius recte.</p>
-					<p>Itaque verae amicitiae difficillime reperiuntur in iis qui in honoribus reque publica versantur; ubi enim istum invenias qui honorem amici anteponat suo? Quid? Haec ut omittam, quam graves, quam difficiles plerisque videntur calamitatum societates! Ad quas non est facile inventu qui descendant. Quamquam Ennius recte.</p>
-				</div>
-				<div id="cv-content" class="text-info">
-					<ul>
-						<li>Formation Simplon</li>
-					</ul>
-					<p>Itaque verae amicitiae difficillime reperiuntur in iis qui in honoribus reque publica versantur; ubi enim istum invenias qui honorem amici anteponat suo? Quid? Haec ut omittam, quam graves, quam difficiles plerisque videntur calamitatum societates! Ad quas non est facile inventu qui descendant. Quamquam Ennius recte.</p>
-					<p>Itaque verae amicitiae difficillime reperiuntur in iis qui in honoribus reque publica versantur; ubi enim istum invenias qui honorem amici anteponat suo? Quid? Haec ut omittam, quam graves, quam difficiles plerisque videntur calamitatum societates! Ad quas non est facile inventu qui descendant. Quamquam Ennius recte.</p>
-					<p>Itaque verae amicitiae difficillime reperiuntur in iis qui in honoribus reque publica versantur; ubi enim istum invenias qui honorem amici anteponat suo? Quid? Haec ut omittam, quam graves, quam difficiles plerisque videntur calamitatum societates! Ad quas non est facile inventu qui descendant. Quamquam Ennius recte.</p>
-					<p>Itaque verae amicitiae difficillime reperiuntur in iis qui in honoribus reque publica versantur; ubi enim istum invenias qui honorem amici anteponat suo? Quid? Haec ut omittam, quam graves, quam difficiles plerisque videntur calamitatum societates! Ad quas non est facile inventu qui descendant. Quamquam Ennius recte.</p>
-				</div>
-				<div id="pro-content" class="text-info">
-					<ul>
-						<li>HTML/CSS/Javascript</li>
-					</ul>
-					<p>Itaque verae amicitiae difficillime reperiuntur in iis qui in honoribus reque publica versantur; ubi enim istum invenias qui honorem amici anteponat suo? Quid? Haec ut omittam, quam graves, quam difficiles plerisque videntur calamitatum societates! Ad quas non est facile inventu qui descendant. Quamquam Ennius recte.</p>
-					<p>Itaque verae amicitiae difficillime reperiuntur in iis qui in honoribus reque publica versantur; ubi enim istum invenias qui honorem amici anteponat suo? Quid? Haec ut omittam, quam graves, quam difficiles plerisque videntur calamitatum societates! Ad quas non est facile inventu qui descendant. Quamquam Ennius recte.</p>
-					<p>Itaque verae amicitiae difficillime reperiuntur in iis qui in honoribus reque publica versantur; ubi enim istum invenias qui honorem amici anteponat suo? Quid? Haec ut omittam, quam graves, quam difficiles plerisque videntur calamitatum societates! Ad quas non est facile inventu qui descendant. Quamquam Ennius recte.</p>
-				</div>
-				<div id="other-content" class="text-info">
-					<ul>
-						<li>Guitare</li>
-					</ul>
-					<p>Itaque verae amicitiae difficillime reperiuntur in iis qui in honoribus reque publica versantur; ubi enim istum invenias qui honorem amici anteponat suo? Quid? Haec ut omittam, quam graves, quam difficiles plerisque videntur calamitatum societates! Ad quas non est facile inventu qui descendant. Quamquam Ennius recte.</p>
-					<p>Itaque verae amicitiae difficillime reperiuntur in iis qui in honoribus reque publica versantur; ubi enim istum invenias qui honorem amici anteponat suo? Quid? Haec ut omittam, quam graves, quam difficiles plerisque videntur calamitatum societates! Ad quas non est facile inventu qui descendant. Quamquam Ennius recte.</p>
-					<p>Itaque verae amicitiae difficillime reperiuntur in iis qui in honoribus reque publica versantur; ubi enim istum invenias qui honorem amici anteponat suo? Quid? Haec ut omittam, quam graves, quam difficiles plerisque videntur calamitatum societates! Ad quas non est facile inventu qui descendant. Quamquam Ennius recte.</p>
-				</div>
-				</div>
+				<script type="text/template" id="idTemplate">
+					<p>User ID : {{id}}</p>
+					<p>Badges Codecademy : {{badges}}</p>
+					<p>e-mail : {{contact.email}}</p>
+					<p>Website : {{contact.website}}</p>
+				</script>
+				<div id="data-content" class="text-info default"></div>
 			</div>
 		</div>
-		<footer>Copyright 2015 - Dant Benjamin</footer>
 	</div>
+	<footer>Copyright 2015 - Dant Benjamin</footer>
 </body>
 </html>
