@@ -1,7 +1,7 @@
 var personalData;
 var defaultUrl = "https://s.idsympa.com/u-23.json";
 var user = window.location.search.substring(1);
-var usersId = ["-666","2","3","4","5","06","7","8","9","10","11","12","13","14","15","16","17","19","20","21","22","23","24"];
+var usersId = ["1","2","3","4","5","06","7","8","9","10","11","12","13","14","15","16","17","19","20","21","22","23","24"];
 var userUrl = defaultUrl;
 for (var i = 0; i < usersId.length; i++){
 	if (usersId[i] == user){
