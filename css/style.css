@@ -27,13 +27,17 @@ body {
 	text-align: center;
 }
 #previous {
-	float:left;
+	position: fixed;
+	top:0;
+	left: 0;
 }
 #previous:hover {
 	cursor: pointer;
 }
 #next {
-	float:right;
+	position: fixed;
+	top:0;
+	right:0;
 }
 #next:hover {
 	cursor: pointer;
@@ -47,11 +51,10 @@ body {
 	border-radius: 50%;
 }
 #my-image {
-	margin:10px 35%;
-	margin-top: 15px;
+	margin:10px 40%;
 	width:20%;
 	border-radius: 50%;
-	box-shadow: 8px 8px #fff;
+	border: 2px solid white;
 }
 #presentation {
 	background-color: rgba(0,0,0,0.5);
@@ -130,5 +133,4 @@ footer {
 	text-align: center;
 	padding: 20px;
 	background-color: rgba(0,0,0,0.5);
-	border: 1px solid;
 }
